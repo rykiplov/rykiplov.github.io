@@ -117,25 +117,6 @@ h2 {
 .buttons_row {
   text-align: center;
   margin-top: 20px; }
-  .buttons_row button {
-    padding: 12px 19px;
-    margin-right: 15px;
-    font-family: MontserratRegular;
-    text-transform: uppercase;
-    -webkit-border-radius: 2px;
-            border-radius: 2px;
-    -webkit-transition: .1s;
-    -o-transition: .1s;
-    transition: .1s; }
-    .buttons_row button:hover {
-      padding: 12px 22px; }
-
-.btn-default {
-  color: #337ab7;
-  border-color: #337ab7; }
-  .btn-default:hover {
-    color: #337ab7;
-    border-color: #337ab7; }
 
 .checkbox,
 .radio {

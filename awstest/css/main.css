@@ -1,0 +1,835 @@
+@charset "UTF-8";
+*, html {
+  margin: 0;
+  padding: 0; }
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/open_sans/OpenSans-Regular.ttf); }
+
+@font-face {
+  font-family: RobotoBold;
+  src: url(../fonts/roboto/Roboto-Bold.ttf); }
+
+@font-face {
+  font-family: RobotoRegular;
+  src: url(../fonts/roboto/Roboto-Regular.ttf); }
+
+@font-face {
+  font-family: MontserratRegular;
+  src: url(../fonts/montserrat/Montserrat-Regular.otf); }
+
+@font-face {
+  font-family: MyriadPro;
+  src: url(../fonts/myriad_pro/MyriadProRegular.ttf); }
+
+.logo-search {
+  margin-top: 30px; }
+
+.logo img {
+  margin-left: 10px; }
+
+.search input {
+  width: 100%;
+  margin-left: 10px;
+  height: 35px;
+  margin-top: 14px;
+  font-family: OpenSans;
+  color: #5e5d5c;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+  text-indent: 6px; }
+
+.search_wrap button {
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  background-color: #0049b0;
+  width: 76px;
+  height: 35px;
+  border: none;
+  margin-top: 14px;
+  margin-left: 8px;
+  color: white;
+  font-size: 19px; }
+
+.search_wrap div {
+  padding: 0; }
+
+#nav {
+  /* container */ }
+  #nav > a {
+    display: none; }
+  #nav li {
+    position: relative; }
+    #nav li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      list-style-type: none; }
+    #nav li:hover ul {
+      display: block; }
+  #nav > ul {
+    height: 3.75em;
+    list-style-type: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 60px; }
+    #nav > ul > li {
+      width: 163px;
+      height: 60px;
+      float: left;
+      font-family: RobotoBold;
+      font-size: 14px;
+      text-align: center; }
+      #nav > ul > li:hover {
+        background-color: #eaecf0; }
+      #nav > ul > li:hover a {
+        color: #0049b0;
+        text-decoration: none; }
+      #nav > ul > li > a {
+        color: #202020; }
+
+.menu_wrap {
+  width: 100%;
+  background-color: #f4f5f7;
+  margin-top: 25px; }
+
+.mobile_logo,
+.mobile_search_field,
+.mobile_search {
+  display: none; }
+
+h2 {
+  font-family: RobotoRegular;
+  color: #303030;
+  font-size: 36px;
+  line-height: 60px;
+  text-align: center;
+  margin-top: 80px; }
+
+.inputs_title {
+  margin-top: 82px; }
+
+.carousel_title {
+  margin-top: 60px; }
+
+.buttons_row {
+  text-align: center;
+  margin-top: 20px; }
+
+.checkbox,
+.radio {
+  display: none; }
+
+.radio-custom {
+  width: 17px;
+  height: 17px;
+  border: 1px solid #337ab7;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  position: relative; }
+
+.checkbox-custom,
+.radio-custom,
+.label {
+  display: inline-block;
+  vertical-align: middle; }
+
+.radio:checked + .radio-custom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  background: #337ab7;
+  -webkit-border-radius: 2px;
+          border-radius: 2px; }
+
+.radio-custom,
+.radio:checked + .radio-custom::before {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  /* Скрываем реальный чекбокс */ }
+
+.checkbox {
+  display: none; }
+
+.checkbox-custom {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #337ab7; }
+
+/* Кастомный чекбокс и лейбл центрируем по вертикали. Если вам это не требуется, то вы можете убрать свойство vertical-align: middle из данного правила, но свойство display: inline-block обязательно должно быть */
+.checkbox-custom,
+.label {
+  display: inline-block;
+  vertical-align: middle; }
+
+.label {
+  color: #5e5d5c;
+  font-size: 15px;
+  font-family: OpenSans;
+  font-weight: 400; }
+
+/* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
+.checkbox:checked + .checkbox-custom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  /* Задаем расстояние от верхней, правой, нижней и левой границы */
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  background-image: url("../img/check.png");
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  -webkit-background-size: 7px 7px;
+          background-size: 7px 7px;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+/* Cначала обозначаем стили для IE8 и более старых версийт.е. здесь мы немного облагораживаем стандартный чекбокс. */
+.checkbox1 {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 47px;
+  height: 20px; }
+
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживаютселекторы с плюсом. Показываем, что label кликабелен. */
+.checkbox1 + label {
+  cursor: pointer; }
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,в них все нижеследующие стили не сработают. */
+/* Прячем оригинальный чекбокс. */
+.checkbox1:not(checked) {
+  position: absolute;
+  opacity: 0; }
+
+.checkbox1:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 60px; }
+
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.checkbox1:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 50px;
+  height: 20px;
+  -webkit-border-radius: 13px;
+          border-radius: 13px;
+  background: #d9534f;
+  -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2); }
+
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.checkbox1:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background: #FFF;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+
+/* Меняем фон чекбокса, когда он включен. */
+.checkbox1:checked + label:before {
+  background: #5cb85c; }
+
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.checkbox1:checked + label:after {
+  left: 30px; }
+
+/* Показываем получение фокуса. */
+.checkbox1:focus + label:before {
+  -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5);
+          box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5); }
+
+.checkbox2 {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 47px;
+  height: 20px; }
+
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживаютселекторы с плюсом. Показываем, что label кликабелен. */
+.checkbox2 + label {
+  cursor: pointer; }
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,в них все нижеследующие стили не сработают. */
+/* Прячем оригинальный чекбокс. */
+.checkbox2:not(checked) {
+  position: absolute;
+  opacity: 0; }
+
+.checkbox2:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 60px; }
+
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.checkbox2:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 50px;
+  height: 20px;
+  -webkit-border-radius: 13px;
+          border-radius: 13px;
+  background: #d9534f;
+  -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2); }
+
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.checkbox2:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background: #FFF;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+
+/* Меняем фон чекбокса, когда он включен. */
+.checkbox2:checked + label:before {
+  background: #5cb85c; }
+
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.checkbox2:checked + label:after {
+  left: 30px; }
+
+/* Показываем получение фокуса. */
+.checkbox2:focus + label:before {
+  -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5);
+          box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5); }
+
+.checkbox2_wrap {
+  margin-top: 10px; }
+
+.inputs_wrap {
+  width: 600px;
+  margin: 0 auto; }
+
+.inputs_row {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 550px; }
+
+.tablet_search, .tablet_search_button {
+  display: none; }
+
+.rating {
+  border: none;
+  float: left; }
+  .rating > input {
+    display: none; }
+  .rating > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"; }
+  .rating > .half:before {
+    content: "\f089";
+    position: absolute; }
+  .rating > label {
+    color: #ddd;
+    float: right; }
+  .rating > input:checked ~ label {
+    color: #FFD700; }
+  .rating:not(:checked) > label:hover {
+    color: #FFD700; }
+    .rating:not(:checked) > label:hover ~ label {
+      color: #FFD700; }
+  .rating > input:checked + label:hover, .rating > input:checked ~ label:hover {
+    color: #FFED85; }
+  .rating > label:hover ~ input:checked ~ label, .rating > input:checked ~ label:hover ~ label {
+    color: #FFED85; }
+
+.rating1 {
+  border: none;
+  float: left; }
+  .rating1 > input {
+    display: none; }
+  .rating1 > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"; }
+  .rating1 > .half:before {
+    content: "\f089";
+    position: absolute; }
+  .rating1 > label {
+    color: #ddd;
+    float: right; }
+  .rating1 > input:checked ~ label {
+    color: #FFD700; }
+  .rating1:not(:checked) > label:hover {
+    color: #FFD700; }
+    .rating1:not(:checked) > label:hover ~ label {
+      color: #FFD700; }
+  .rating1 > input:checked + label:hover, .rating1 > input:checked ~ label:hover {
+    color: #FFED85; }
+  .rating1 > label:hover ~ input:checked ~ label, .rating1 > input:checked ~ label:hover ~ label {
+    color: #FFED85; }
+
+.stars_row {
+  text-align: center;
+  margin-top: 10px; }
+
+.stars_wrap {
+  width: 140px;
+  margin: 0 auto; }
+
+.footer_row ul, .mobile_footer ul {
+  list-style-type: none;
+  font-family: RobotoRegular;
+  font-size: 16px; }
+  .footer_row ul li a, .mobile_footer ul li a {
+    color: #202020;
+    line-height: 40px; }
+    .footer_row ul li a:hover, .mobile_footer ul li a:hover {
+      text-decoration: none !important;
+      font-family: RobotoBold; }
+
+.footer_row h4, .mobile_footer h4 {
+  color: #337ab7;
+  font-family: RobotoBold;
+  font-size: 16px; }
+
+.footer_wrap {
+  width: 100%;
+  height: auto;
+  background-color: #f4f5f7; }
+
+.social_links {
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #404040;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #202020;
+  width: 40px;
+  height: 35px;
+  display: inline-block;
+  text-align: center;
+  line-height: 35px;
+  font-size: 16px;
+  color: white;
+  margin-right: 10px;
+  margin-top: 12px; }
+  .social_links:hover {
+    background-color: #337ab7;
+    color: white;
+    border-color: #337ab7; }
+
+#slide1, #slide2, #slide3, #slide4 {
+  width: 100%;
+  height: 230px;
+  border: 1px solid #eeeeee;
+  background-color: #fff;
+  margin-top: 25px; }
+  #slide1 img, #slide2 img, #slide3 img, #slide4 img {
+    width: 270px !important;
+    height: 270px;
+    margin-top: -20px;
+    margin-left: 35px; }
+
+.owl-carousel {
+  width: 757px;
+  height: 300px;
+  margin: 0 auto; }
+
+.owl-prev {
+  position: absolute;
+  top: 38%;
+  left: -62px; }
+
+.owl-next {
+  position: absolute;
+  top: 38%;
+  right: -62px; }
+
+.custom_left, .custom_right {
+  width: 42px;
+  height: 42px;
+  border-width: 1px;
+  border-color: #dadada;
+  border-style: solid;
+  background-color: #ffffff;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  line-height: 42px; }
+  .custom_left:hover, .custom_right:hover {
+    border-color: #337ab7;
+    color: #337ab7; }
+
+.comment {
+  color: #808080;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  font-family: MyriadPro;
+  margin-top: 43px;
+  margin-left: 57px; }
+
+.author {
+  font-family: MyriadPro;
+  color: #303030;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-left: 57px;
+  margin-top: 15px; }
+
+.date {
+  font-family: MyriadPro;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  margin-left: 57px;
+  margin-top: -3px; }
+
+.chew {
+  width: 76px;
+  height: 76px;
+  background-image: url(../img/chew_small.png);
+  display: inline-block; }
+
+.darth {
+  width: 76px;
+  height: 76px;
+  background-image: url(../img/darth_small.png);
+  display: inline-block; }
+
+.yoda {
+  width: 76px;
+  height: 76px;
+  background-image: url(../img/yoda_small.png);
+  display: inline-block; }
+
+.r2d2 {
+  width: 76px;
+  height: 76px;
+  background-image: url(../img/r2_small.png);
+  display: inline-block; }
+
+.chew:active, .darth:active, .yoda:active, .r2d2:active {
+  border: 2px solid #337ab7;
+  -webkit-border-radius: 50%;
+          border-radius: 50%; }
+
+.chew:hover, .darth:hover, .yoda:hover, .r2d2:hover {
+  border: 2px solid #337ab7;
+  -webkit-border-radius: 50%;
+          border-radius: 50%; }
+
+.small_buttons_row {
+  text-align: center;
+  margin-top: 10px; }
+  .small_buttons_row a {
+    margin-right: 10px; }
+
+#google-container {
+  position: relative;
+  width: 100%;
+  height: 455px;
+  background-color: #e7eaf0; }
+
+#google-map {
+  position: relative;
+  margin-top: 90px; }
+
+#zoom-in, #zoom-out {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  margin-left: 10px;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  opacity: 0.7; }
+
+#zoom-in {
+  background-image: url("../img/plus.png"); }
+
+#zoom-out {
+  background-image: url("../img/minus.png"); }
+
+#zoom-in:hover, #zoom-out:hover {
+  opacity: 1; }
+
+.footer_row {
+  margin-top: 45px;
+  padding-bottom: 40px; }
+
+.mobile_footer {
+  display: none; }
+
+.accordion {
+  display: none; }
+
+.follow_us_header {
+  text-align: center;
+  margin-top: 50px; }
+
+@media screen and (max-width: 768px) {
+  #nav {
+    position: relative; }
+    #nav:not(:target) > a:first-of-type {
+      display: inline-block;
+      margin-left: 27px !important; }
+    #nav:target > a:last-of-type, #nav:target > ul {
+      display: inline-block;
+      margin-left: 27px !important; }
+    #nav > ul {
+      height: auto;
+      display: none;
+      position: absolute;
+      left: -27px;
+      right: 0;
+      top: 50px;
+      background: white;
+      z-index: 100; }
+    #nav > ul > li {
+      width: 100%;
+      float: none; }
+    #nav li ul {
+      position: static; }
+  .logo-search {
+    display: none; }
+  .mobile_logo {
+    display: inline-block;
+    width: 174px;
+    margin-left: 20px !important; }
+  .inputs_title {
+    margin-top: 30px; }
+  .stars_title {
+    margin-top: 47px; }
+  .carousel_title {
+    margin-top: -7px; }
+  .owl-carousel {
+    width: 100%;
+    height: 420px; }
+  .owl-next, .owl-prev {
+    display: none; }
+  #slide1, #slide2, #slide3, #slide4 {
+    margin-top: 0px;
+    height: 419px; }
+    #slide1 img, #slide2 img, #slide3 img, #slide4 img {
+      width: 188px !important;
+      height: 188px;
+      margin: 0 auto;
+      margin-top: 20px; }
+  .comment {
+    margin-left: 10px;
+    margin-top: 16px; }
+  .author {
+    margin-left: 10px;
+    margin-top: -2px; }
+  .date {
+    margin-left: 10px; }
+  .menu_wrap {
+    background-color: white;
+    margin-top: 12px; }
+  .mobile_search {
+    display: inline-block;
+    border: none;
+    background-color: white;
+    color: #0049b0;
+    font-size: 22px;
+    margin-left: 20px; }
+  .inputs_row {
+    width: 100%; }
+  .mobile_search_field {
+    margin-top: 19px; }
+    .mobile_search_field input {
+      width: 100%;
+      height: 35px;
+      font-family: OpenSans;
+      color: #5e5d5c;
+      font-size: 15px;
+      font-weight: 400;
+      text-align: left;
+      text-indent: 6px;
+      margin-left: -5px; }
+    .mobile_search_field button {
+      -webkit-border-radius: 2px;
+              border-radius: 2px;
+      background-color: #0049b0;
+      width: 76px;
+      height: 35px;
+      border: none;
+      color: white;
+      font-size: 19px;
+      margin-left: -5px; }
+  h2 {
+    margin-top: 35px; }
+  .buttons_row {
+    text-align: left;
+    margin-top: 3px; }
+  .btn-success, .btn-info, .btn-warning, .btn-danger {
+    margin-top: 20px; }
+  .radios, .switchers {
+    margin-top: 25px;
+    margin-left: -20px; }
+  .checkboxes {
+    margin-top: -16px;
+    margin-left: -20px; }
+  .tablet_search, .tablet_search_button {
+    display: none !important; }
+  #google-map {
+    display: none; }
+  .chew, .darth, .yoda, .r2d2 {
+    width: 62px;
+    height: 62px;
+    -webkit-background-size: contain;
+            background-size: contain; }
+  .tablet_footer_items {
+    display: none; }
+  .follow_us_header {
+    margin-top: 14px; }
+  a.social_links {
+    margin-top: 10px; }
+  .accordion {
+    display: block !important; } }
+
+/*----- Accordion ----- */
+.accordion {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background: #f7f7f7; }
+  .accordion * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+/*----- Section Titles ----- */
+.accordion-section-title {
+  width: 100%;
+  padding: 15px;
+  margin-left: 12px;
+  display: inline-block;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  background: #f4f5f7;
+  font-family: RobotoBold;
+  -webkit-transition: all linear 0.15s;
+  -o-transition: all linear 0.15s;
+  transition: all linear 0.15s;
+  /* Type */
+  color: black !important;
+  text-decoration: none !important;
+  font-size: 14px; }
+  .accordion-section-title.active, .accordion-section-title:hover {
+    /* Type */
+    text-decoration: none;
+    color: #337ab7 !important; }
+  .accordion-section-title i {
+    margin-right: 30px;
+    float: right; }
+
+.accordion-section:last-child .accordion-section-title {
+  border-bottom: none; }
+
+/*----- Section Content ----- */
+.accordion-section-content {
+  padding: 15px;
+  display: none; }
+
+@media screen and (max-width: 1025px) {
+  #nav {
+    position: relative; }
+    #nav:not(:target) > a:first-of-type {
+      display: inline-block;
+      margin-left: 120px; }
+    #nav:target > a:last-of-type, #nav:target > ul {
+      display: inline-block;
+      margin-left: 120px; }
+    #nav > ul {
+      height: auto;
+      display: none;
+      position: absolute;
+      left: -27px;
+      right: 0;
+      top: 50px;
+      background: white;
+      z-index: 100; }
+    #nav > ul > li {
+      width: 100%;
+      float: none; }
+    #nav li ul {
+      position: static; }
+  .logo-search {
+    display: none; }
+  .mobile_logo {
+    display: inline-block;
+    width: 170px;
+    margin-left: 32px; }
+  .tablet_search_button {
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    background-color: #0049b0;
+    width: 76px;
+    height: 35px;
+    border: none;
+    margin-left: -6px;
+    color: white;
+    font-size: 19px;
+    margin-top: 6px; }
+  .tablet_search {
+    width: 290px;
+    height: 35px;
+    margin-left: 140px;
+    text-indent: 20px;
+    margin-top: 6px; }
+  .tablet_search, .tablet_search_button {
+    display: inline-block; }
+  .menu_wrap {
+    background-color: #fff; }
+  #google-map {
+    display: none; }
+  .footer_row {
+    display: none; }
+  .mobile_footer {
+    display: block; }
+  .footer_wrap {
+    margin-top: 50px; }
+  .social_links {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 50px; }
+  .accordion {
+    display: none; } }

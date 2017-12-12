@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>LaCuisine - High Cuisine Restaurant</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#db5945">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<style>
+		body {
+			opacity: 0;
+			overflow-x: hidden;
+		}
+		html {
+			background-color: #fff;
+		}
+	</style>
+	<script>
+		function l_image (a) {
+			var bigImg = document.getElementById("big_img");
+			bigImg.src=a
+		}
+	</script>
+</head>
+
+<body>
+<div id="loader_wrap">
+	<div id="loader">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</div>
+<div id="my-page">
+	<div id="my-header">
+		<header class="header">
+	<div class="top_line">
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<a href="index.html" class="logo"><span>La</span>Cuisine</a>
+				</div>
+				<div class="col-8 justify-content-end">
+					<nav class="nav">
+						<ul>
+							<li><a href="#" class="menu-btn">Menu</a></li>
+							<li><a href="#" data-remodal-target="modal-reservation">Reservation</a></li>
+							<li><a href="#" class="contacts-btn">Contacts</a></li>
+							<li><a href="#">About</a></li>
+						</ul>
+					</nav>
+					<button id="my-icon" class="hamburger hamburger--emphatic" type="button">
+            <span class="hamburger-box">
+               <span class="hamburger-inner"></span>
+            </span>
+					</button>
+					<nav id="mob-menu">
+						<ul>
+							<li><a href="#" class="menu-btn">Menu</a></li>
+							<li><a href="#" data-remodal-target="modal-reservation">Reservation</a></li>
+							<li><a href="#" class="contacts-btn">Contacts</a></li>
+							<li><a href="#">About</a></li>
+						</ul>
+					</nav>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+		<div class="container full-height">
+			<div class="row full-height align-items-end">
+				<div class="col-12">
+					<div class="owl-carousel owl-theme">
+						<div class="item">
+							<h1 class="h1">High cuisine restaurant</h1>
+							<h2 class="h2">placed in Moscow</h2>
+							<button class="button menu-btn">View menu</button>
+						</div>
+						<div class="item"><h4>2</h4></div>
+						<div class="item"><h4>3</h4></div>
+						<div class="item"><h4>4</h4></div>
+					</div>
+					<img src="img/plate1.png" alt="">
+				</div>
+			</div>
+		</div>
+</header>
+	</div>
+
+	<div id="my-content">
+		<section class="menu">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 no_padding dish_list_all">
+						<div id="tabs">
+							<ul>
+								<li><a href="#tabs-lunch">Lunch</a></li>
+								<li><a href="#tabs-dinner">Dinner</a></li>
+								<li><a href="#tabs-dessert">Dessert</a></li>
+								<li><a href="#tabs-drinks">Drinks</a></li>
+							</ul>
+							<div id="tabs-lunch">
+								<h2 class="h2">Lunch menu</h2>
+								<p>
+									Lunch is served at 10am onwards. It is our pleasure  to welcome our guests with daily welcome drink. It is a good start for your time at our restaurant.
+								</p>
+								<ul class="dish_list">
+									<li>
+										<div>
+											<a href="javascript:l_image('img/lunch/beef_short_ribs1.png')" class="active">
+												<img src="img/lunch/beef_short_ribs1.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Beef short ribs <span class="price">$40</span></span> <br>
+													<span class="dish_descr">Slow-cooked beef short ribs</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="javascript:l_image('img/lunch/chicken_tocsana.png')">
+												<img src="img/lunch/chicken_tocsana.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Chicken tocsana <span class="price">$32</span></span> <br>
+													<span class="dish_descr">Delicious recipe for a Filipino lunch favourite dish</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="javascript:l_image('img/lunch/salmon.png')">
+												<img src="img/lunch/salmon.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Baked salmon with vegs <span class="price">$25</span></span> <br>
+													<span class="dish_descr">Fresh parsley and lemon juice keeps this lunch light</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="javascript:l_image('img/lunch/smoked_pork_cropped.png')">
+												<img src="img/lunch/smoked_pork_cropped.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Smoked pork cropped <span class="price">$28</span></span> <br>
+													<span class="dish_descr">All of the luscious smoky flavor of good slow barbecued pork</span>
+												</div>
+											</a>
+										</div>
+									</li>
+
+									<li>
+										<div>
+											<a href="javascript:l_image('img/lunch/spicy_prawns.png')">
+												<img src="img/lunch/spicy_prawns.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Spicy prawns <span class="price">$19</span></span> <br>
+													<span class="dish_descr">Sizzling, spicy and packed full of flavour, these juicy king prawns</span>
+												</div>
+											</a>
+										</div>
+									</li>
+
+								</ul>
+
+							</div>
+							<div id="tabs-dinner">
+								<h2 class="h2">Dinner menu</h2>
+								<p>
+									Dinner is served at 6pm onwards. It is our pleasure  to welcome our guests with daily welcome drink. It is a good start for your time at our restaurant.
+								</p>
+
+								<ul class="dish_list">
+									<li>
+										<div>
+											<a href="javascript:l_image('img/dinner/baked_chicken.png')">
+												<img src="img/dinner/baked_chicken.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Grilled sausages<span class="price">$25</span></span> <br>
+													<span class="dish_descr">Grilled sausages, peppers, and onions, steamed in beer, and then served                          hot
+													</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="javascript:l_image('img/dinner/baked_pork.png')">
+												<img src="img/dinner/baked_pork.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Baked pork with spicy sauce<span class="price">$30</span></span> <br>
+													<span class="dish_descr">Baked pork chops covered in brown sugar and garlic on a sheet pan with                           yukon potatoes</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="javascript:l_image('img/dinner/grilled_salmon.png')">
+												<img src="img/dinner/grilled_salmon.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Grilled salmon with vegs<span class="price">$42</span></span> <br>
+													<span class="dish_descr">Soy sauce and brown sugar marinade, with hints of lemon and garlic, are the perfect salty-sweet complement to rich salmon fillets</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="javascript:l_image('img/dinner/potato_chicken.png')">
+												<img src="img/dinner/potato_chicken.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Potatoed chicken<span class="price">$28</span></span> <br>
+													<span class="dish_descr">Potatoes tossed in garlic and olive oil and baked to a golden brown with tender, juicy chicken thighs</span>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
+
+							</div>
+							<div id="tabs-dessert">
+								<h2 class="h2">Dessert menu</h2>
+
+								<ul class="dish_list">
+									<li>
+										<div>
+											<a href="javascript:l_image('img/dessert/banana.png')">
+												<img src="img/dessert/banana.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Story behind banana<span class="price">$25</span></span> <br>
+													<span class="dish_descr">These banana desserts double up as lazy morning treats as well as a plate of french toast</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="javascript:l_image('img/dessert/chocolate_pie.png')">
+												<img src="img/dessert/chocolate_pie.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Chocolate pie <span class="price">$18</span></span> <br>
+													<span class="dish_descr">Old-fashioned chocolate meringue pie just like grandma made. A rich chocolate filling, flaky pie crust and airy meringue topping</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="javascript:l_image('img/dessert/dessert_nachos.png')">
+												<img src="img/dessert/dessert_nachos.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Dessert nachos <span class="price">$21</span></span> <br>
+													<span class="dish_descr">A dessert nacho recipe made by drizzling warm chocolate syrup over vanilla ice cream and baked cinnamon sugar coated tortilla chips</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="javascript:l_image('img/dessert/ice_cream.png')">
+												<img src="img/dessert/ice_cream.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Ice cream <span class="price">$12</span></span> <br>
+													<span class="dish_descr">These ice cream desserts are simple and delicious - a perfect treat for any occasion</span>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div id="tabs-drinks">
+								<h2 class="h2">Drinks menu</h2>
+								<ul class="dish_list">
+									<li>
+										<div>
+											<a href="javascript:l_image('img/drinks/fire_up.png')">
+												<img src="img/drinks/fire_up.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Jack Rose<span class="price">$18</span></span> <br>
+													<span class="dish_descr">A deceptively simple looking recipe, the Jack Rose calls for applejack, lime juice, and grenadine</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="javascript:l_image('img/drinks/glintwine.png')">
+												<img src="img/drinks/glintwine.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Dark muled glintwine<span class="price">$25</span></span> <br>
+													<span class="dish_descr">Mulled wine definition: wine heated with sugar and spices</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="javascript:l_image('img/drinks/red_russian.png')">
+												<img src="img/drinks/red_russian.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Red russian <span class="price">$21</span></span> <br>
+													<span class="dish_descr">Made up of equal parts vodka and either cherry liqueur or strawberry schnapps and served with ice</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="javascript:l_image('img/drinks/tia_maria.png')">
+												<img src="img/drinks/tia_maria.png" alt="">
+												<div class="dish_name_wrap">
+													<span class="dish_name">Tia Maria <span class="price">$12</span></span> <br>
+													<span class="dish_descr">A delicious sparkling and refreshing drink that is the current favourite of our team of bartenders</span>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 hidden-xs-down col-lg-8 no_padding">
+						<div class="dish_photo">
+							<img src="img/lunch/beef_short_ribs1.png" id="big_img" alt="Dish photo">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="recommended">
+
+			<div class="container">
+				<div class="row">
+				<h3 class="h3">Choose & Enjoy</h3>
+				<h2 class="h2">Chef's recommended</h2>
+				</div>
+				<div class="row">
+					<div class="owl-carousel owl-my owl-theme">
+						<div class="item">
+							<img src="img/beef_steak.png" alt="">
+							<p class="dish_name">Beef steak</p>
+							<p class="dish_desc">Enjoy our beef steak with a tastefull sauce of cherry juice and white wine</p>
+							<a href="#" class="menu-btn">Discover more</a>
+						</div>
+						<div class="item">
+							<img src="img/salmon.png" alt="">
+							<p class="dish_name">Salmon steak</p>
+							<p class="dish_desc">Out salmon steak with wonderful creame sauce is a good part of your day</p>
+							<a href="#" class="menu-btn">Discover more</a>
+						</div>
+						<div class="item">
+							<img src="img/dessert.png" alt="">
+							<p class="dish_name">Tastefull dessert</p>
+							<p class="dish_desc">Dessert with cake and baked bananas is a good choice ordered</p>
+							<a href="#" class="menu-btn">Discover more</a>
+						</div>
+						<div class="item">
+							<img src="img/salad.png" alt="">
+							<p class="dish_name">Art of salad</p>
+							<p class="dish_desc">Our pashot's eggs are good choice of your order to breakfast today</p>
+							<a href="#" class="menu-btn">Discover more</a>
+						</div>
+						<div class="item">
+							<img src="img/beef_steak.png" alt="">
+							<p class="dish_name">Beef steak</p>
+							<p class="dish_desc">Enjoy our beef steak with a tastefull sauce of cherry juice and white wine</p>
+							<a href="#" class="menu-btn">Discover more</a>
+						</div>
+						<div class="item">
+							<img src="img/dessert.png" alt="">
+							<p class="dish_name">Tastefull dessert</p>
+							<p class="dish_desc">Dessert with cake and baked bananas is a good choice ordered</p>
+							<a href="#" class="menu-btn">Discover more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="our_chef">
+			<div class="container-fluid">
+				<div class="row justify-content-center align-items-center">
+					<div class="col-12 no_padding col-md-12 col-lg-6">
+						<img src="img/chef.png" alt="" style="width: 100%;">
+					</div>
+					<div class="col-12 no_padding chef_details col-md-12 col-lg-6">
+						<div class="wrap">
+							<h2 class="h2">Our Chef</h2>
+							<p class="about_chef">
+								Having left a career in the futures brokerage industry, Sofia Jeffrey chose the path of cooking with the aspirations of traveling. However after finishing her studies at the Cooking and Hospitality Institute of Paris; she set out to first put in time in the best kitchens in Moscow began to hone his skills.
+							</p>
+							<p class="working_history">2008	<span>Junior at Black Thai</span></p>
+							<p class="working_history">2010	<span>Middle Chef at Vanna</span></p>
+							<p class="working_history">2008	<span>Sauce Chef O2 Lounge</span></p>
+							<p class="working_history">2008	<span>Head Chef at LaCuisine</span></p>
+							<img src="img/signature.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div id="my-footer">
+		<footer class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<h3 class="h3">Come & fill</h3>
+				<h2 class="h2">First class expirience</h2>
+			</div>
+			<div class="row align-items-center" style="background-color: #F5F5F5">
+				<div class="col-12 col-md-12 col-lg-4 footer_items no_padding">
+					<p class="heading">Address</p>
+					<p>House 20a</p>
+					<p>Malaya Bronnaya</p>
+					<button class="button" data-remodal-target="modal-map">Get Direction</button>
+				</div>
+				<div class="col-12 col-md-12 col-lg-4 footer_items no_padding">
+					<img src="img/footer1.png" alt="">
+				</div>
+				<div class="col-12 col-md-12 col-lg-4 footer_items no_padding">
+					<p class="heading">Contacts</p>
+					<p>Tel: <a href="callto:+74957851719">+7 (495) 785-17-19</a></p>
+					<p>E: <a href="mailto:lauisine@yandex.ru">LaCuisine@yandex.ru</a></p>
+					<button class="button">Back to call</button>
+				</div>
+			</div>
+			<div class="row align-items-center" style="background-color: #F5F5F5">
+				<div class="col-12 col-md-12 col-lg-4 footer_items no_padding">
+					<img src="img/footer2.png" alt="">
+				</div>
+				<div class="col-12 col-md-12 col-lg-4 footer_items no_padding">
+					<p class="heading">Opening hours</p>
+					<p>Mon-Fri <span>18:00 - 23:00</span></p>
+					<p>Sun-Sat <span>12:00 - 02:00</span></p>
+					<button class="button" data-remodal-target="modal-reservation">Online reservation</button>
+				</div>
+				<div class="col-12 col-md-12 col-lg-4 footer_items no_padding">
+					<img src="img/footer3.png" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+</div>
+
+<div class="remodal" data-remodal-id="modal-reservation">
+	<button data-remodal-action="close" class="remodal-close"></button>
+	<h1>Reservation</h1>
+	<input type="text" placeholder="Your name">
+	<input type="text" placeholder="Your phone">
+	<input type="date" value="2018-01-01">
+	<input type="time" value="18:00">
+	<br>
+	<button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+	<button data-remodal-action="confirm" class="remodal-confirm" >Reserve</button>
+</div>
+
+<div class="remodal" data-remodal-id="modal-map">
+	<button data-remodal-action="close" class="remodal-close"></button>
+	<h1>Map</h1>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.769720241793!2d37.59327631606284!3d55.762502398711064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a37fbf8bc29%3A0xc994f7c6e1dd232d!2z0JzQsNC70LDRjyDQkdGA0L7QvdC90LDRjyDRg9C7LiwgMjDQkCwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEyMzEwNA!5e0!3m2!1sru!2sua!4v1513085731603" allowfullscreen></iframe>
+</div>
+
+
+<link rel="stylesheet" href="css/main.min.css">
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

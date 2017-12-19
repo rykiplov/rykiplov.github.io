@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>LaCuisine - High Cuisine Restaurant</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<style>
+		body {
+			opacity: 0;
+			overflow-x: hidden;
+		}
+		html {
+			background-color: #fff;
+		}
+	</style>
+
+</head>
+
+<body>
+<div id="loader_wrap">
+	<div id="loader">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</div>
+<div id="my-page">
+	<div id="my-header">
+		<header class="header_contacts">
+	<div class="top_line">
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<a href="index.html" class="logo"><span>La</span>Cuisine</a>
+				</div>
+				<div class="col-8 justify-content-end">
+					<nav class="nav">
+						<ul>
+							<li><a href="#" class="menu-btn">Menu</a></li>
+							<li><a href="#" data-remodal-target="modal-reservation">Reservation</a></li>
+							<li><a href="#" class="contacts-btn">Contacts</a></li>
+						</ul>
+					</nav>
+					<button id="my-icon" class="hamburger hamburger--emphatic" type="button">
+            <span class="hamburger-box">
+               <span class="hamburger-inner"></span>
+            </span>
+					</button>
+					<nav id="mob-menu">
+						<ul>
+							<li><a href="#" class="menu-btn">Menu</a></li>
+							<li><a href="#" data-remodal-target="modal-reservation">Reservation</a></li>
+							<li><a href="#" class="contacts-btn">Contacts</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="container-fluid full-height contacts">
+	<div class="row align-items-center full-height">
+		<h1 class="h1">Feel free to contacts us</h1>
+		<div class="col-12 col-sm-12 col-md-12 col-lg-6">
+			<form class="contacts_form">
+				<div class="field name-box">
+					<input type="text" id="name" placeholder="Who Are You?">
+					<label for="name">Name</label>
+					<span class="ss-icon">check</span>
+				</div>
+
+				<div class="field email-box">
+					<input type="text" id="email" placeholder="name@email.com">
+					<label for="email">Email</label>
+					<span class="ss-icon">check</span>
+				</div>
+
+				<div class="field msg-box">
+					<textarea id="msg" rows="4" placeholder="Your message goes here..."></textarea>
+					<label for="msg">Msg</label>
+					<span class="ss-icon">check</span>
+				</div>
+
+				<input class="button" type="submit" value="Send" >
+			</form>
+		</div>
+
+
+		<div class="col-12 col-sm-12 col-md-12 col-lg-6">
+			<div id="google-map">
+				<div id="google-container"></div>
+				<div id="zoom-in">
+					<i class="fa fa-plus"></i>
+				</div>
+				<div id="zoom-out">
+					<i class="fa fa-minus"></i>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		</div>
+
+
+		</div>
+		</header>
+		</div>
+	</div>
+
+
+<div class="remodal" data-remodal-id="modal-reservation">
+	<button data-remodal-action="close" class="remodal-close"></button>
+	<h1>Reservation</h1>
+	<input type="text" placeholder="Your name">
+	<input type="text" placeholder="Your phone">
+	<input type="date" value="2018-01-01">
+	<input type="time" value="18:00">
+	<br>
+	<button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+	<button data-remodal-action="confirm" class="remodal-confirm" >Reserve</button>
+</div>
+
+<div class="remodal" data-remodal-id="modal-map">
+	<button data-remodal-action="close" class="remodal-close"></button>
+	<h1>Map</h1>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.769720241793!2d37.59327631606284!3d55.762502398711064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a37fbf8bc29%3A0xc994f7c6e1dd232d!2z0JzQsNC70LDRjyDQkdGA0L7QvdC90LDRjyDRg9C7LiwgMjDQkCwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEyMzEwNA!5e0!3m2!1sru!2sua!4v1513085731603" allowfullscreen></iframe>
+</div>
+
+
+<link rel="stylesheet" href="css/main.min.css">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJVb98rGs9-qSG5STzj18ogmH1Mtuooc"></script>
+<script src="js/scripts.min.js"></script>
+<script>
+
+	$(document).ready(function($) {
+//Местоположение: долгота, широта и коэффициент увеличения
+		var latitude = 55.7622638,
+				longitude = 37.595682,
+				map_zoom = 14;
+		popupContent = "<p class='map_content'>LaCuisine <br> High Cuisine Restaurant <br> Malaya Bronnaya 20a</p>";
+
+//Адрес до иконки с маркером
+		var marker_url = 'img/icon-location.png';
+
+
+		var main_color = '#007148', //основной цвет
+				saturation_value = -1, //насыщенность
+				brightness_value = 1; //яркость
+
+//Стили для элементов на карте
+		var style = [
+			{
+				"featureType": "administrative",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#232222"
+					}
+				]
+			},
+			{
+				"featureType": "landscape",
+				"elementType": "all",
+				"stylers": [
+					{
+						"color": "#F5F5F5"
+					}
+				]
+			},
+			{
+				"featureType": "poi",
+				"elementType": "all",
+				"stylers": [
+					{
+						"visibility": "off"
+					}
+				]
+			},
+			{
+				"featureType": "road",
+				"elementType": "all",
+				"stylers": [
+					{
+						"saturation": -100
+					},
+					{
+						"lightness": 45
+					},
+					{
+						"hue": "#ff0000"
+					}
+				]
+			},
+			{
+				"featureType": "road",
+				"elementType": "geometry.fill",
+				"stylers": [
+					{
+						"color": "#6d6a6a"
+					}
+				]
+			},
+			{
+				"featureType": "road.highway",
+				"elementType": "all",
+				"stylers": [
+					{
+						"visibility": "simplified"
+					}
+				]
+			},
+			{
+				"featureType": "road.arterial",
+				"elementType": "labels.icon",
+				"stylers": [
+					{
+						"visibility": "off"
+					}
+				]
+			},
+			{
+				"featureType": "transit",
+				"elementType": "all",
+				"stylers": [
+					{
+						"visibility": "off"
+					}
+				]
+			},
+			{
+				"featureType": "water",
+				"elementType": "all",
+				"stylers": [
+					{
+						"color": "#A3CCFF"
+					},
+					{
+						"visibility": "on"
+					}
+				]
+			}
+		];
+
+//Создание точки на карте
+		var map_options = {
+			center: new google.maps.LatLng(latitude, longitude),
+			zoom: map_zoom,
+			panControl: false,
+			zoomControl: false,
+			mapTypeControl: false,
+			streetViewControl: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			scrollwheel: false,
+			styles: style
+		}
+//Инициализация карты
+		var map = new google.maps.Map(document.getElementById('google-container'), map_options);
+//Добавляем свой маркер местонахождения на карту (свою иконку)
+		var marker = new google.maps.Marker({
+			position: new google.maps.LatLng(latitude, longitude),
+			map: map,
+			visible: true,
+			icon: marker_url,
+			animation: google.maps.Animation.BOUNCE
+		});
+
+		var infowindow = new google.maps.InfoWindow({
+			content: popupContent
+		});
+
+		infowindow.open(map, marker);
+		marker.addListener('click', function () {
+			infowindow.open(map, marker);
+		});
+
+
+//Добавляем свои иконки для кнопок увеличить/уменьшить на карту
+		function CustomZoomControl(controlDiv, map) {
+			var controlUIzoomIn = document.getElementById('zoom-in'),
+					controlUIzoomOut = document.getElementById('zoom-out');
+			controlDiv.appendChild(controlUIzoomIn);
+			controlDiv.appendChild(controlUIzoomOut);
+
+			//Делаем привязку для кнопок увеличить/уменьшить при клике
+			google.maps.event.addDomListener(controlUIzoomIn, 'click', function () {
+				map.setZoom(map.getZoom() + 1)
+			});
+			google.maps.event.addDomListener(controlUIzoomOut, 'click', function () {
+				map.setZoom(map.getZoom() - 1)
+			});
+		}
+
+		var zoomControlDiv = document.createElement('div');
+		var zoomControl = new CustomZoomControl(zoomControlDiv, map);
+
+//Помещаем кнопки увеличить/уменьшить на карту в левый верхний угол
+		map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
+
+	});
+
+
+
+</script>
+
+</body>
+</html>

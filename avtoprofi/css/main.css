@@ -507,6 +507,7 @@ footer li {
 	cursor: pointer;
 	color: #D12F22;
 	padding: 10px;
+	z-index: 100;
 }
 
 

@@ -972,3 +972,26 @@ textarea.input2 + .focus-input2::after {
 		opacity: 1;
 	}
 }
+
+.preloader_wrap
+{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: auto;
+}
+.preloader_hide {opacity:0;}
+#preloader {
+	/*	position:fixed; */
+	width:128px;
+	height:128px;
+	display:block;
+	/*
+		top:45%;
+		left: 45%;
+	*/}

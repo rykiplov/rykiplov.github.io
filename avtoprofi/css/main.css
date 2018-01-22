@@ -582,6 +582,10 @@ footer li {
 	.mc_item_wrap {
 		width: 170px;
 	}
+	footer li {
+		display: inline-block;
+		font-size: 18px;
+	}
 }
 
 

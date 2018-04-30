@@ -2,7 +2,7 @@ define(
   ['jquery', 'knockout', 'core/get_product_list'],
 
   function($, ko, getProductList) {
-    var jsonUrl = '/js/model/products.json';
+    var jsonUrl = 'js/model/products.json';
 
     var DataObject = {
       items: getProductList(jsonUrl),

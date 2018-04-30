@@ -1,0 +1,27 @@
+<div class="toolbar_wrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-4">
+				<span>Products per page:</span>
+				<select name="products-per-page" id="products-per-page" data-bind="options: topToolbar.productsPerPage, value: topToolbar.currentProductsPerPage">
+				</select>
+			</div>
+			<div class="col-4">
+				<p>
+					Products
+					<span data-bind="text: topToolbar.getProductStartPosition()"></span>
+					-
+					<span data-bind="text: topToolbar.getProductEndPosition()"></span>
+					of
+					<span data-bind="text: topToolbar.itemsTotal"></span> total
+				</p>
+			</div>
+
+			<div class="col-4">
+				<span>Filter by</span>
+				<select name="sort-products" id="sort-products" data-bind="options: topToolbar.filterOptions, value: topToolbar.currentFilter">
+				</select>
+			</div>
+		</div>
+	</div>
+</div>

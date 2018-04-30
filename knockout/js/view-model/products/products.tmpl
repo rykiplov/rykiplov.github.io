@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row">
+		<!-- ko foreach: productList.pagedList -->
+		<div class="col-md-4">
+			<div class="product-wrap hoverable">
+				<div class="product-item">
+					<h5 class="product-item-title" data-bind="text: name"></h5>
+					<a href="#">
+						<div class="product-image-wrap">
+							<img class="product-image" data-bind="attr: {src: img, alt: name}" src="../../../img/magento-placeholder.jpg">
+						</div>
+					</a>
+					<p class="product-descr" data-bind="text: description"></p>
+					<p class="product-price" data-bind="text: '$ ' + price()"></p>
+					<a class="waves-effect waves-light btn btn-primary product-btn">VIEW</a>
+				</div>
+			</div>
+		</div>
+		<!-- /ko -->
+	</div>
+</div>
+

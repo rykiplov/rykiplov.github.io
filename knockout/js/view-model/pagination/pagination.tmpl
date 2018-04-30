@@ -1,0 +1,31 @@
+<ul class=" pagination">
+	<li data-bind="css: {'disabled': pagination.pageNumber() == 0}">
+		<a href="#" data-bind="click: pagination.moveToFirstPage, enable: pagination.pageNumber() > 0">
+			<span>First</span>
+		</a>
+	</li>
+	<li data-bind="css: {'disabled': pagination.pageNumber() <= 0}">
+		<a href="#" data-bind="click: pagination.moveToPrevPage">
+			<span>Previous</span>
+		</a>
+	</li>
+
+	<!-- ko foreach:pagination.pagers -->
+	<li data-bind="css: {'active': $data == $root.pagination.pageNumber()}">
+		<!--<a data-bind="text: $data, attr: { 'href': '#page=' + ($index() + 1)}, click: $root.bottomToolbar.pagerClick"></a>-->
+		<a data-bind="text: $data + 1, click:$root.pagination.moveToPage.bind($data), attr: { 'href': '#page=' + ($data)}"></a>
+	</li>
+	<!--/ko-->
+
+	<li data-bind="css: {'disabled': pagination.pageNumber() >= pagination.maxPageNumber()}">
+		<a href="#" data-bind="click: pagination.moveToNextPage">
+			<span>Next</span>
+		</a>
+	</li>
+	<li data-bind="css: {'disabled': pagination.pageNumber() == pagination.maxPageNumber()}">
+		<a href="#"
+		   data-bind="click: pagination.moveToLastPage, enable: pagination.pageNumber() < pagination.maxPageNumber()">
+			<span>Last</span>
+		</a>
+	</li>
+</ul>
